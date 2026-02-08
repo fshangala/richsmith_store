@@ -12,6 +12,14 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  function toggleMenu() {
+    const nav = document.querySelector("#main-nav");
+    if (nav) {
+      nav.classList.toggle("hidden");
+      nav.classList.toggle("flex");
+    }
+  }
+
   return (
     <header className="bg-white text-black shadow sticky top-0 z-10">
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
@@ -26,13 +34,16 @@ export default function Navbar() {
                     </div>
                 </a>
             </div>
-            <div>
-                <nav className="flex gap-1">
+            <div className="relative">
+                <button className="sm:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-600" aria-label="Toggle menu" onClick={toggleMenu}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu w-6 h-6"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <nav id="main-nav" className="hidden sm:flex flex-col sm:flex-row gap-1 items-center absolute sm:static right-0 bg-white border border-stone-200 sm:border-none overflow-hidden sm:p-0 rounded-md sm:rounded-none">
                 {navItems.map((item) => (
                     <a
                     key={item.name}
                     href={item.href}
-                    className={`px-4 py-2 rounded-md ${
+                    className={`px-10 sm:px-4 py-2 rounded-md whitespace-nowrap ${
                         pathname === item.href
                         ? "bg-primary-600 text-white"
                         : "hover:bg-gray-100"
