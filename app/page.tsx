@@ -1,7 +1,7 @@
-import Banner from "./components/banner";
-import FeaturedProducts from "./components/featured_products";
-import Hero from "./components/hero";
-import QualitySection from "./components/quality_section";
+import Banner from "@/lib/components/banner";
+import FeaturedProducts from "@/lib/components/featured_products";
+import Hero from "@/lib/components/hero";
+import QualitySection from "@/lib/components/quality_section";
 
 export default function Home() {
   return (
