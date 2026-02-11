@@ -35,7 +35,35 @@ export default function Contact() {
                             </div>
                         </div>
                     </div>
-                    <div></div>
+                    <div className="lg:col-span-2">
+                        <div className="rounded-xl border bg-white text-stone-700 border-stone-200 shadow-lg">
+                            <div className="p-8">
+                                <h2 className="text-2xl font-bold text-stone-900 mb-6">Send Us a Message</h2>
+                                <form className="space-y-6">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">Full Name *</label>
+                                        <input className="flex w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 border-stone-300 focus:border-primary-500 focus:ring-primary-500" id="name" required placeholder="John Doe" type="text" value="" name="name" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">Email Address *</label>
+                                        <input className="flex w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 border-stone-300 focus:border-primary-500 focus:ring-primary-500" id="email" required placeholder="john@example.com" type="email" value="" name="email" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-2">Phone Number *</label>
+                                        <input className="flex w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-12 border-stone-300 focus:border-primary-500 focus:ring-primary-500" id="phone" required placeholder="+91 9876543210" type="tel" value="" name="phone" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-2">Message *</label>
+                                        <textarea className="flex w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm h-32 border-stone-300 focus:border-primary-500 focus:ring-primary-500" id="message" required placeholder="Your message here..." name="message" rows={6}></textarea>
+                                    </div>
+                                    <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 rounded-md px-8 w-full bg-primary-600 hover:bg-primary-700 text-white h-12 font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]" type="submit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-send w-5 h-5 mr-2" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
