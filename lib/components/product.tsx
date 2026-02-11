@@ -1,8 +1,6 @@
 'use client';
 
-import ProductModel from "../models/product";
-
-export default function Product({ product }: { product: ProductModel }) {
+export default function Product({ product }: { product: {name: string, imageUrl: string, category: string, description: string} }) {
     return (
         <div className="bg-gray-100 rounded-xl border border-stone-200 shadow-md overflow-hidden">
             <div className="relative overflow-hidden h-64 bg-linear-to-br from-stone-50 to-stone-100">

@@ -5,7 +5,7 @@ class ProductModel {
     id: number;
     name: string;
     imageUrl: string;
-    category: string
+    category: string;
     description: string;
 
     constructor(id:number, name:string, imageUrl:string, category:string, description:string) {
